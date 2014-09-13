@@ -27,7 +27,17 @@ end
 
 # Specs style
 
-# describe HelloString do
+describe String do
 
-# end
+    before do
+        @candidate = "Hello World"
+    end
+
+    describe "when ask for the length" do
+        it "it answers with a Fixnum" do
+            @candidate.length.class.must_equal Fixnum
+        end
+    end
+
+end
 
