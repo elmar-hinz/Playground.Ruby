@@ -1,7 +1,10 @@
 
+gem "minitest", '5.4.1'
 require "minitest/autorun"
 
-class UnitTestWithMiniTest < Minitest::Unit::TestCase
+# Unit test style
+
+class UnitTestWithMiniTest < Minitest::Test
 
     def setup
         @candidate = "Hello World"
@@ -19,5 +22,12 @@ class UnitTestWithMiniTest < Minitest::Unit::TestCase
         assert_equal 2, "oe".length
         assert_equal 1, "ö".length
     end
+
 end
+
+# Specs style
+
+# describe HelloString do
+
+# end
 
