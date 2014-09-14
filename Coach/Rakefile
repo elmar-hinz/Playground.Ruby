@@ -1,0 +1,8 @@
+require 'rake'
+
+task :default => :test
+
+task :test do
+    Dir.glob('./spec/**/*_spec.rb') { |f| require f }
+end
+

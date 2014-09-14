@@ -1,13 +1,17 @@
-gem "minitest", '>5.0.0'
-
-require "minitest/autorun"
-require_relative "../lib/simpletest"
+require_relative "spec_helper"
+require "simpletest"
 
 describe Coach::SimpleTest do
 
     before do
         @candidate = Coach::SimpleTest.new
         @string = "Tolle Umlaute und Sonderzeichen:     §Äly"
+    end
+
+    describe "simply failing" do
+        it "fails" do
+            assert 1 > 0
+        end
     end
 
     describe "when the question is empty" do
